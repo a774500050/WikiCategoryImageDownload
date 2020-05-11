@@ -49,9 +49,9 @@ For example:
 ```shell script
 分类:东方辉针城|分类:少名针妙丸
 ```
-Console will status of each file. All files will be saved in Download folder.  
-If one image file already exist in the folder and it's size is not zero, this image
-will be skipped.
+Console will status of each file. All files will be saved in `Download` folder.  
+If one image file already exist in the folder, and it's size is not zero. This image
+will be **skipped**.
 
 ## Download Example
 Download with same file failed:
