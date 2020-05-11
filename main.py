@@ -144,7 +144,10 @@ def download_intersected_image(image_set):
     if not dir_is_exist:
         os.makedirs(download_path)
     for image in image_set:
-        name = image[3:]
+        split_name = image.split(":", 1)
+        if len(split_name) == 1:
+            continue
+        name = split_name[1]
         formed_image_query = f'/{quote("特殊:重定向")}/?wptype=file&wpvalue={quote(name)}'
         image_path = os.path.join(download_path, name)
         if os.path.exists(image_path) and (os.path.getsize(image_path) != 0):
