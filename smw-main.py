@@ -3,6 +3,7 @@ import os
 import sys
 from urllib.parse import quote
 
+# Modified BASE_URL and API_URL to your wiki directory, you can lookup the Special:Version page.
 BASE_URL = "https://thwiki.cc"
 API_URL = "https://thwiki.cc/api.php"
 S = requests.session()
@@ -50,7 +51,8 @@ def download_image(image_list):
         if len(split_name) == 1:
             continue
         name = split_name[1]
-        formed_image_query = f'/{quote("特殊:重定向")}/?wptype=file&wpvalue={quote(name)}'
+        # formed_image_query = f'/{quote("特殊:重定向")}/?wptype=file&wpvalue={quote(name)}'
+        formed_image_query = f'/Special:Redirect/?wptype=file&wpvalue={quote(name)}'
         image_path = os.path.join(download_path, name)
         if os.path.exists(image_path) and (os.path.getsize(image_path) != 0):
             continue
