@@ -3,6 +3,7 @@ import os
 import sys
 from urllib.parse import quote
 
+# Modified BASE_URL and API_URL to your wiki directory, you can lookup the Special:Version page.
 BASE_URL = "https://thwiki.cc"
 API_URL = "https://thwiki.cc/api.php"
 S = requests.session()
@@ -148,7 +149,8 @@ def download_intersected_image(image_set):
         if len(split_name) == 1:
             continue
         name = split_name[1]
-        formed_image_query = f'/{quote("特殊:重定向")}/?wptype=file&wpvalue={quote(name)}'
+        # formed_image_query = f'/{quote("特殊:重定向")}/?wptype=file&wpvalue={quote(name)}'
+        formed_image_query = f'/Special:Redirect/?wptype=file&wpvalue={quote(name)}'
         image_path = os.path.join(download_path, name)
         if os.path.exists(image_path) and (os.path.getsize(image_path) != 0):
             continue
@@ -160,19 +162,6 @@ def download_intersected_image(image_set):
                     print(f"Download {name} Success")
             except Exception as e:
                 print(f"Download {name} fail", e)
-
-
-# file_list = ['东方三月精V3卷封面.jpg', '东方三月精V连载第一话封面.jpg', '东方三月精V第一卷通常版cover2.jpg']
-# path = os.path.join(os.getcwd(), 'Download')
-# dir_is_exist = os.path.exists(path)
-# if not dir_is_exist:
-#     os.makedirs(path)
-# os.chdir(path)
-# for file in file_list:
-#     formed_image_query = f'/{quote("特殊:重定向")}/?wptype=file&wpvalue={quote(file)}'
-#     r = S.get(BASE_URL+formed_image_query)
-#     with open(file, 'wb') as f:
-#         f.write(r.content)
 
 
 BOT_TOKEN = read_bot_token()

@@ -2,7 +2,10 @@
 A simple tool to download images in one category or download
 images in category intersection.  
 Check out [**smw-version**](https://github.com/a774500050/WikiCategoryImageDownload/tree/smw-version) branch if your 
-wiki has  [**SemanticMediaWiki**](https://github.com/SemanticMediaWiki/SemanticMediaWiki) installed. 
+wiki has  [**SemanticMediaWiki**](https://github.com/SemanticMediaWiki/SemanticMediaWiki) installed.
+## Attention
+This tool has been modified to [**THBWiki**](https://thwiki.cc), you need to change the **`BASE_API`** and
+**`API_URL`** parameter to your wiki's path.
 ## Requirements
 just need module [Requests](https://github.com/psf/requests)
 ```shell script
