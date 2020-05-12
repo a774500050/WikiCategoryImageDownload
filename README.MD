@@ -18,7 +18,7 @@ Since images in one category may be over 500
 > The maximum number of pages to return.   
 > No more than 500 (5000 for bots) allowed. Enter max to use the maximum limit.
 
-You need to create a [BotPassword](https://thwiki.cc/Special:BotPasswords).
+You need to create a **BotPassword** in **Special:BotPassword**.
 >Bot passwords allow access to a user account via the
 > API without using the account's main login credentials.
 > The user rights available when logged in with a bot password may be restricted.
@@ -54,7 +54,7 @@ For example:
 分类:东方辉针城|分类:少名针妙丸
 ```
 Console will show status of each file. All files will be saved to `Download` folder.  
-If one image file already exist in the folder, and it's size is not zero. This image
+If one image file already exists in the folder, and it's size is not zero. This image
 will be **skipped**.
 
 ## Download Example
