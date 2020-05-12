@@ -1,7 +1,8 @@
 # Wiki Category Image download
 A simple tool to download images in one category or download
-images in category intersection.
-
+images in category intersection.  
+Check out [**smw-version**](https://github.com/a774500050/WikiCategoryImageDownload/tree/smw-version) branch if your 
+wiki has  [**SemanticMediaWiki**](https://github.com/SemanticMediaWiki/SemanticMediaWiki) installed. 
 ## Requirements
 just need module [Requests](https://github.com/psf/requests)
 ```shell script
@@ -49,7 +50,7 @@ For example:
 ```shell script
 分类:东方辉针城|分类:少名针妙丸
 ```
-Console will status of each file. All files will be saved in `Download` folder.  
+Console will show status of each file. All files will be saved to `Download` folder.  
 If one image file already exist in the folder, and it's size is not zero. This image
 will be **skipped**.
 
