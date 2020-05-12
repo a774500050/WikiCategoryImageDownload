@@ -10,7 +10,7 @@ pip install requests
 To run this tool, Your mediawiki site need to have [**SemanticMediaWiki**](https://github.com/SemanticMediaWiki/SemanticMediaWiki) installed.
 
 ## Run
-Run the python file.  
+Run the python file `smw-main.py`.  
 You need to input category name like:
 ```shell script
 [[分类:博丽灵梦]]
